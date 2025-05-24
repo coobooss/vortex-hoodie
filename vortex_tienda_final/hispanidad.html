@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Hispanidad | Vortex Hoodie</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #e0f0ff, #cce6ff);
+      color: #003366;
+    }
+    header {
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header img {
+      height: 50px;
+    }
+    .container {
+      max-width: 500px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .container img.logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+    label, select {
+      display: block;
+      margin: 10px auto;
+      width: 80%;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #e60000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 1rem;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #cc0000;
+    }
+    #precio {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .sudadera-preview {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto 20px;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background: #003366;
+      color: white;
+    }
+    .volver {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #003366;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="vortex.png" alt="Vortex Hoodie">
+    <span>La Hispanidad</span>
+  </header>
+
+  <div class="container">
+    <img src="hispanidad.png" alt="Logo La Hispanidad" class="logo">
+    <img id="imagenSudadera" src="sudadera-blanca.png" alt="Sudadera" class="sudadera-preview">
+
+    <label for="color">Color:</label>
+    <select id="color" onchange="cambiarColor()">
+      <option value="blanca">Blanca</option>
+      <option value="amarilla">Amarilla</option>
+      <option value="rosa-fuerte">Rosa Fuerte</option>
+      <option value="rosa-claro">Rosa Claro</option>
+      <option value="verde">Verde</option>
+      <option value="burdeos">Burdeos</option>
+      <option value="azul-marino">Azul Marino</option>
+      <option value="verde-oscuro">Verde Oscuro</option>
+      <option value="azul-claro">Azul Claro</option>
+      <option value="gris">Gris</option>
+      <option value="roja">Roja</option>
+      <option value="negra">Negra</option>
+      <option value="azul-electrico">Azul Eléctrico</option>
+      <option value="morado">Morado</option>
+      <option value="celeste">Celeste</option>
+      <option value="turquesa">Turquesa</option>
+    </select>
+
+    <label for="talla">Talla:</label>
+    <select id="talla" onchange="mostrarPrecio()">
+      <option value="S">S</option>
+      <option value="M">M</option>
+      <option value="L">L</option>
+      <option value="XL">XL</option>
+    </select>
+
+    <button onclick="continuarPedido()">Continuar</button>
+    <div id="precio">Precio: 30,00€</div>
+
+    <a href="index.html" class="volver">← Volver al inicio</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Vortex Hoodie. Todos los derechos reservados.<br>
+    Contacto: info@vortexhoodie.com
+  </footer>
+
+  <script>
+    function cambiarColor() {
+      var color = document.getElementById('color').value;
+      document.getElementById('imagenSudadera').src = 'sudadera-' + color + '.png';
+    }
+
+    function mostrarPrecio() {
+      var talla = document.getElementById('talla').value;
+      var precio = 30.00;
+      if (talla === 'M') precio = 31.50;
+      else if (talla === 'L') precio = 32.00;
+      else if (talla === 'XL') precio = 33.00;
+      document.getElementById('precio').innerText = 'Precio: ' + precio.toFixed(2) + '€';
+    }
+
+    function continuarPedido() {
+      var color = document.getElementById('color').value;
+      var talla = document.getElementById('talla').value;
+      alert('Has elegido una sudadera ' + color.toUpperCase() + ', talla ' + talla + '.');
+    }
+  </script>
+</body>
+</html>
