@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vortex Hoodie</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e6f0ff, #cce0ff);
+      color: #003366;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+    }
+    .colegios {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .colegio {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 180px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      text-decoration: none;
+      color: #003366;
+    }
+    .colegio:hover {
+      transform: translateY(-5px);
+    }
+    .colegio img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Vortex Hoodie</h1>
+  <p>Tu sudadera personalizada para cada colegio, fácil y al mejor precio</p>
+  <div class="colegios">
+    <a href="fomento.html" class="colegio">
+      <img src="fomento_fundación.png" alt="Fomento Fundación" />
+      <div>Fomento Fundación</div>
+    </a>
+    <a href="hispanidad.html" class="colegio">
+      <img src="hispanidad.png" alt="La Hispanidad" />
+      <div>La Hispanidad</div>
+    </a>
+    <a href="maristas.html" class="colegio">
+      <img src="maristas.png" alt="Maristas" />
+      <div>Maristas</div>
+    </a>
+    <a href="mater.html" class="colegio">
+      <img src="mater.png" alt="Mater Immaculata" />
+      <div>Mater Immaculata</div>
+    </a>
+    <a href="prado.html" class="colegio">
+      <img src="prado.png" alt="El Prado" />
+      <div>El Prado</div>
+    </a>
+  </div>
+</body>
+</html>
